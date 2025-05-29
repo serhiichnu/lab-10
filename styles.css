@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 15px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .left-tab {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .right-tab {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+
+  
+  .tab.active {
+    background: #bababa;
+    font-weight: bold;
+  }
+  
+  .form {
+    display: none;
+  }
+  
+  .form.active {
+    display: block;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+
+  .form-group.success input,
+  .form-group.success select {
+    border-color: rgb(150, 150, 150);
+  }
+  
+  .form-group.error input,
+  .form-group.error select {
+    border-color: red;
+  }
+  
+  .form-group small {
+    color: red;
+    font-size: 12px;
+    display: none;
+  }
+  
+  .form-group.error small {
+    display: block;
+  }
+  
+  .password-field {
+    position: relative;
+  }
+  
+  .toggle-eye {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background: #828282;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  .checkbox input[type="checkbox"] {
+    margin-right: 6px;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    border-radius: 12px;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus, .form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .form-group select {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+  .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"], .form-group input[type="number"], .form-group input[type="search"] {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+
+/* lab10 */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.user-card:hover {
+  transform: translateY(-2px);
+}
+
+.user-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#pagination button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dee2e6;
+  cursor: pointer;
+}
+#pagination button.active {
+  background-color: #495057;
+  color: white;
+}
+
+#error {
+  color: red;
+  margin: 10px 0;
+  display: none;
+}
+#error.visible {
+  display: block;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.controls input[type="text"],
+.controls select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.controls button#logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.controls button#logout-btn:hover {
+  background-color: #c82333;
+}

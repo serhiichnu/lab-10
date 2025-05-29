@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab 10 - Користувачі</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="auth" class="container">
+    <div class="tabs">
+      <button class="tab active left-tab" data-tab="register">Реєстрація</button>
+      <button class="tab right-tab" data-tab="login">Авторизація</button>
+    </div>
+
+    <form id="register-form" class="form active">
+        <h2>Реєстрація</h2>
+        <div class="form-group">
+          <label>Імʼя</label>
+          <input type="text" name="firstName" required />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Прізвище</label>
+          <input type="text" name="lastName" required />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Електронна адреса</label>
+          <input type="email" name="email" required />
+          <small></small>
+        </div>
+        <div class="form-group password-field">
+          <label>Пароль</label>
+          <input type="password" name="password" required />
+          <span class="toggle-eye">👁</span>
+          <small></small>
+        </div>
+        <div class="form-group password-field">
+          <label>Підтвердіть пароль</label>
+          <input type="password" name="confirmPassword" required />
+          <span class="toggle-eye">👁</span>
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" name="phone" required />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Дата народження</label>
+          <input type="date" name="dob" required />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Стать</label>
+          <select name="sex" required>
+            <option value="">Оберіть</option>
+            <option value="male">Чоловік</option>
+            <option value="female">Жінка</option>
+          </select>
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Країна</label>
+          <select name="country" required></select>
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label>Місто</label>
+          <select name="city" disabled required></select>
+          <small></small>
+        </div>
+        <button type="submit">Зареєструватися</button>
+      </form>
+
+    <form id="login-form" class="form">
+        <h2>Авторизація</h2>
+        <div class="form-group">
+          <label>Імʼя користувача</label>
+          <input type="text" name="username" required />
+          <small></small>
+        </div>
+        <div class="form-group password-field">
+          <label>Проль</label>
+          <input type="password" name="loginPassword" required />
+          <span class="toggle-eye">👁</span>
+          <small></small>
+        </div>
+        <div class="form-group checkbox">
+          <input type="checkbox" name="remember" />
+          <label>Запам'ятати мене</label>
+        </div>
+        <button type="submit">Увійти</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div id="main-container" class="container" style="display: none;">
+    <div class="controls">
+      <input type="text" id="search-input" placeholder="Пошук користувача..." />
+      <select id="sort-select">
+        <option value="name-asc">Ім'я (А-Я)</option>
+        <option value="name-desc">Ім'я (Я-А)</option>
+        <option value="age-asc">Вік (↑)</option>
+        <option value="age-desc">Вік (↓)</option>
+        <option value="date-asc">Дата реєстрації (↑)</option>
+        <option value="date-desc">Дата реєстрації (↓)</option>
+      </select>
+      <button id="logout-btn">Вийти</button>
+    </div>
+
+    <div id="error"></div>
+    <div id="user-list"></div>
+    <div id="pagination"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
