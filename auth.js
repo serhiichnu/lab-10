@@ -85,14 +85,7 @@ document.querySelectorAll(".tab").forEach((tab) => {
     }
   
     if (valid) {
-      const data = Object.fromEntries(new FormData(loginForm));
-      const saved = JSON.parse(localStorage.getItem("user"));
-      console.log(saved)
-      if (saved && saved.email === data.username) {
         onSuccess();
-      } else {
-        alert("Невірні дані"); // заміни на модальний або інший UI
-      }
     }
   });
   
@@ -169,7 +162,7 @@ document.querySelectorAll(".tab").forEach((tab) => {
 }
 
 export function isLoggedIn() {
-  return true // !!localStorage.getItem("user");
+  return !!localStorage.getItem("user");
 }
 
 export function logout() {
